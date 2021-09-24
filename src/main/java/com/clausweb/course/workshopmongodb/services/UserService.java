@@ -6,9 +6,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.clausweb.course.workshopmongodb.UserDTO.UserDTO;
 import com.clausweb.course.workshopmongodb.domain.User;
 import com.clausweb.course.workshopmongodb.repository.UserRepository;
 import com.clausweb.course.workshopmongodb.services.exception.ObjectNotFounException;
+import com.mongodb.client.model.ReturnDocument;
 
 @Service
 public class UserService {
@@ -21,18 +23,26 @@ public class UserService {
 		return repo.findAll();
 	}
 
-
-		
+	
 		public User findById(String id) {
 			Optional<User> obj = repo.findById(id);
 			return obj.orElseThrow(() -> new ObjectNotFounException("Objeto não encontrado"));
 		}
 		
 		
+	public User insert(User obj) {
+		
+		return repo.insert(obj);
+		
+		
+	}
 	
+	public User fromDTO(UserDTO objDto) {
+	
+	return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
 	
 
-	
+	}
 	
 	
 }
