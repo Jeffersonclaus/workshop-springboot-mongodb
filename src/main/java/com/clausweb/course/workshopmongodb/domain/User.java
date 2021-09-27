@@ -70,8 +70,7 @@ public class User implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 	
-	
-	
+
 	
 	
 	
