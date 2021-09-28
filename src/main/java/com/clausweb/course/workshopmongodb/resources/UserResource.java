@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.clausweb.course.workshopmongodb.UserDTO.UserDTO;
 import com.clausweb.course.workshopmongodb.domain.User;
+import com.clausweb.course.workshopmongodb.dto.UserDTO;
 import com.clausweb.course.workshopmongodb.services.UserService;
 
 @RestController

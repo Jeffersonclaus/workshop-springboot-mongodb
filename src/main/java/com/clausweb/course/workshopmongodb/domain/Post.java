@@ -7,6 +7,8 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.clausweb.course.workshopmongodb.dto.AutoDTO;
+
 @Document
 public class Post  implements Serializable{
 
@@ -19,7 +21,7 @@ public class Post  implements Serializable{
 	private Date date;
 	private String title;
 	private String body;
-	private User author;
+	private AutoDTO author;
 	
 
 
@@ -33,7 +35,7 @@ public class Post  implements Serializable{
 
 
 
-	public Post(String id, Date date, String title, String body, User author) {
+	public Post(String id, Date date, String title, String body, AutoDTO author) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -71,13 +73,13 @@ public class Post  implements Serializable{
 		this.body = body;
 	}
 
-	public User getAuthor() {
+	public AutoDTO getAuthor() {
 		return author;
 	}
 
 
 
-	public void setAuthor(User author) {
+	public void setAuthor(AutoDTO author) {
 		this.author = author;
 	}
 

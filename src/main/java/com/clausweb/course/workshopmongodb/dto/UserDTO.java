@@ -1,4 +1,4 @@
-package com.clausweb.course.workshopmongodb.UserDTO;
+package com.clausweb.course.workshopmongodb.dto;
 
 import java.io.Serializable;
 

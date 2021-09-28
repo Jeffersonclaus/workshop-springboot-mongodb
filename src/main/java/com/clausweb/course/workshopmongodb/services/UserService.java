@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.clausweb.course.workshopmongodb.UserDTO.UserDTO;
 import com.clausweb.course.workshopmongodb.domain.User;
+import com.clausweb.course.workshopmongodb.dto.UserDTO;
 import com.clausweb.course.workshopmongodb.repository.UserRepository;
 import com.clausweb.course.workshopmongodb.services.exception.ObjectNotFounException;
 
