@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.clausweb.course.workshopmongodb.domain.Post;
 import com.clausweb.course.workshopmongodb.domain.User;
-import com.clausweb.course.workshopmongodb.dto.AutoDTO;
+import com.clausweb.course.workshopmongodb.dto.AuthorDTO;
 import com.clausweb.course.workshopmongodb.repository.PostRepository;
 import com.clausweb.course.workshopmongodb.repository.UserRepository;
 
@@ -37,8 +37,8 @@ PostRepository postRepository;
 		
 		userRepository.saveAll(Arrays.asList(maria,alex,bob));
 		
-		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu Viagem", "Vou Viajar para São Paulo.Abraços!",new AutoDTO( maria));
-		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje!", new AutoDTO( maria));
+		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu Viagem", "Vou Viajar para São Paulo.Abraços!",new AuthorDTO( maria));
+		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO( maria));
 		
 		postRepository.saveAll(Arrays.asList(post1,post2));
 		

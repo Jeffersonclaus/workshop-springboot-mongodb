@@ -4,18 +4,19 @@ import java.io.Serializable;
 
 import com.clausweb.course.workshopmongodb.domain.User;
 
-public class AutoDTO implements Serializable{
+public class AuthorDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private String id;
 	private String name;
+	
 
 
-	public AutoDTO() {
+	public AuthorDTO() {
 
 	}
 
-	public AutoDTO(User obj) {
+	public AuthorDTO(User obj) {
 		id = obj.getId();
 		name = obj.getName();
 	

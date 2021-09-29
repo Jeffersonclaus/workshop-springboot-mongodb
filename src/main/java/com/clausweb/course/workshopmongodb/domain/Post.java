@@ -1,41 +1,36 @@
 package com.clausweb.course.workshopmongodb.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.clausweb.course.workshopmongodb.dto.AutoDTO;
+import com.clausweb.course.workshopmongodb.dto.AuthorDTO;
+import com.clausweb.course.workshopmongodb.dto.ComentDTO;
 
 @Document
-public class Post  implements Serializable{
+public class Post implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	
+
 	@Id
 	private String id;
-	
+
 	private Date date;
 	private String title;
 	private String body;
-	private AutoDTO author;
-	
-
-
+	private AuthorDTO author;
+	private List<ComentDTO> coment = new ArrayList<>();
 
 	public Post() {
-		
-		
+
 	}
-	
-	
 
-
-
-	public Post(String id, Date date, String title, String body, AutoDTO author) {
+	public Post(String id, Date date, String title, String body, AuthorDTO author) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -44,52 +39,58 @@ public class Post  implements Serializable{
 		this.author = author;
 	}
 
-
-
-
-
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	public Date getDate() {
 		return date;
 	}
+
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getBody() {
 		return body;
 	}
+
 	public void setBody(String body) {
 		this.body = body;
 	}
 
-	public AutoDTO getAuthor() {
+	public AuthorDTO getAuthor() {
 		return author;
 	}
 
-
-
-	public void setAuthor(AutoDTO author) {
+	public void setAuthor(AuthorDTO author) {
 		this.author = author;
 	}
 
+	public List<ComentDTO> getComent() {
+		return coment;
+	}
+
+	public void setComent(List<ComentDTO> coment) {
+		this.coment = coment;
+	}
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -103,12 +104,4 @@ public class Post  implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 }
