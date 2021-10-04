@@ -52,6 +52,9 @@ public class UserService {
 		newObj.setName(obj.getName());
 		newObj.setEmail(obj.getEmail());
 	}
+	
+
+	
 
 
 	public User fromDTO(UserDTO objDto) {
